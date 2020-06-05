@@ -4,17 +4,26 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button btnSave;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LinearLayout linearLayout=new LinearLayout(getApplicationContext());
+
+        setContentView(R.layout.activity_main);
+
+        btnSave=(Button) findViewById(R.id.btnSave);
+        btnSave.setBackgroundColor(Color.RED);
+
+        /*LinearLayout linearLayout=new LinearLayout(getApplicationContext());
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-        //setContentView(R.layout.activity_main);
+
         linearLayout.setBackgroundColor(Color.GREEN);
         setContentView(linearLayout);
 
@@ -26,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         params.leftMargin=30;
         textView.setPadding(0,20,0,0);
         textView.setBackgroundColor(Color.RED);
-        linearLayout.addView(textView, params);
+        linearLayout.addView(textView, params);*/
         test();
     }
 
