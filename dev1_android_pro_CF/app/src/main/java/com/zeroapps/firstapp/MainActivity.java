@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textView=new TextView(getApplicationContext());
         textView.setText("kepedo prro");
         //textView.setLayoutParams(params);
+        params.leftMargin=30;
+        textView.setPadding(0,20,0,0);
         textView.setBackgroundColor(Color.RED);
         linearLayout.addView(textView, params);
         test();
