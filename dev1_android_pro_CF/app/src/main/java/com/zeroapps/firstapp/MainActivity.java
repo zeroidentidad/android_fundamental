@@ -1,6 +1,7 @@
 package com.zeroapps.firstapp;
 
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnSave=(Button) findViewById(R.id.btnSave);
-        btnSave.setBackgroundColor(Color.RED);
+        //btnSave.setBackgroundColor(Color.RED);
+
+        //getResources().getColor(R.color.orange);
+        getColor(R.color.orange);
+        //* compat
+        //ContextCompat.getColor(getApplicationContext(),R.color.orange);
+
+        btnSave.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.orange));
 
         /*LinearLayout linearLayout=new LinearLayout(getApplicationContext());
         linearLayout.setOrientation(LinearLayout.VERTICAL);
