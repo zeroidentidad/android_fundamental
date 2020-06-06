@@ -34,15 +34,28 @@ public class AdapterStudent extends ArrayAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (activity!=null){
-            convertView=activity.getLayoutInflater().inflate(resource,null);
-            TextView txtItem = (TextView) convertView.findViewById(R.id.textItem);
-            Student student = students.get(position);
-            txtItem.setText(student.getName());
-            if (!student.isPass()){
-                txtItem.setBackgroundColor(Color.RED);
+        ViewHolder holder=new ViewHolder();
+        if (convertView==null){
+            if (activity!=null){
+                convertView=activity.getLayoutInflater().inflate(resource,null);
+
+                holder.textItem = (TextView) convertView.findViewById(R.id.textItem);
+                convertView.setTag(holder);
             }
+        } else {
+            holder=(ViewHolder)convertView.getTag();
         }
+
+        Student student = students.get(position);
+        holder.textItem.setText(student.getName());
+        if (!student.isPass()){
+            holder.textItem.setBackgroundColor(Color.RED);
+        }
+
         return convertView;
+    }
+
+    static class ViewHolder{
+        private TextView textItem;
     }
 }
