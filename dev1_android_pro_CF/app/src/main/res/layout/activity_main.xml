@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:theme="@style/Format"
     tools:context=".MainActivity">
 
     <Button
@@ -11,6 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/save"
-        android:background="@color/orange"/>
+        style="@style/Format.Button"/> <!-- style="@style/Format" -->
+
+    <Button
+        android:id="@+id/btnSave2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/save"/>
 
 </LinearLayout>
