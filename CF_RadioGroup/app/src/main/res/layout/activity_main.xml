@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RadioGroup
+        android:id="@+id/rgGen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rbH">
+
+        <RadioButton
+            android:id="@+id/rbH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hembra" />
+
+        <RadioButton
+            android:id="@+id/rbM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Macho" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+</LinearLayout>
