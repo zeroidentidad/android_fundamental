@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tutorial.helloworld" >
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+        android:name="com.tutorial.helloworld.MainActivity"
+        android:label="@string/app_name" >
+
+    </activity>
+        <activity android:name=".LocationActivity">
+
+        </activity>
+        <activity android:name=".NoteActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SaveNoteActivity">
+
+        </activity>
+        <activity android:name="com.tutorial.helloworld.SecondActivity">
+
+        </activity>
+
+        <activity android:name=".SensorActivity">
+
+        </activity>
+
+        <activity android:name=".DialogActivity">
+
+        </activity>
+
+        <activity android:name=".LayoutActivity">
+
+        </activity>
+
+        <receiver android:name=".HelloBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
