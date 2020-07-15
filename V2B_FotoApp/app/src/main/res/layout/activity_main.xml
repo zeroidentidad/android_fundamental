@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <LinearLayout
+            android:id="@+id/mapa"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="5"
+            android:background="#00d8e3"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:src="@drawable/brujula"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:text="Mapa" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/carrete"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="5"
+            android:background="#fac600"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:src="@drawable/carrete"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:text="Multimedia" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <LinearLayout
+            android:id="@+id/categorias"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="5"
+            android:background="#fd4c56"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:src="@drawable/categories"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:text="Categorias" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ajutes"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="5"
+            android:background="#4c4e5a"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:src="@drawable/ajustes"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:text="Ajustes" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#3cd8e4">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:src="@drawable/tomarfoto"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:gravity="center_horizontal"
+                android:text="Tomar foto" />
+    </LinearLayout>
+
+</LinearLayout>
