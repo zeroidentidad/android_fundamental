@@ -1,6 +1,8 @@
 package com.zeroapps.v2b_fotoapp;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -21,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         mapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Kepedo",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), MapasActivity.class);
+                startActivity(intent);
             }
         });
     }
