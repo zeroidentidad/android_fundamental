@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.util.List" />
+
+        <variable
+            name="usuario"
+            type="com.linkedin.curso.android.jetpack.architecturecomponents.basico.databinding.modelo.Usuario" />
+
+        <variable
+            name="listaUsuario"
+            type="java.util.List&lt;com.linkedin.curso.android.jetpack.architecturecomponents.basico.databinding.modelo.Usuario&gt;" />
+
+        <variable
+            name="textoGrande"
+            type="boolean" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".basico.databinding.DataBindingActivity"
+        tools:showIn="@layout/activity_data_binding">
+
+        <TextView
+            android:id="@+id/id_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@{usuario.nombre.toUpperCase()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nombre" />
+
+        <TextView
+            android:id="@+id/id_apellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:text="@{usuario.apellido}"
+            android:visibility="@{usuario.apellido.length() > 5 ? View.GONE : View.VISIBLE}"
+            app:layout_constraintStart_toEndOf="@+id/id_nombre"
+            app:layout_constraintTop_toTopOf="@+id/id_nombre"
+            tools:text="Apellido" />
+
+        <TextView
+            android:id="@+id/nombre_lista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@{listaUsuario[3].apellido+listaUsuario[3].nombre}"
+            android:textSize="@{textoGrande ? @dimen/texto_grande :  @dimen/texto_normal }"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_nombre" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
+
+
+    <!-- Elementos permitidos dentro del data binding en las vistas
+    * Operadores matemáticos + - / * %
+    * Operador de concatenación de String +
+    * Operadores lógicos && ||
+    * Operadores binarios & | ^
+    * Operadores unarios + - ! ~
+    * Operadores de cambio de bits >> >>> <<
+    * Operadores de comparación == > < >= <=
+    * Operador de herencia instanceof
+    * Operadores de agrupación de operaciones ()
+    * Literales como caracteres, strings, numéricos, null...
+    * Operaciones Cast
+    * Llamada a métodos
+    * Acceso a campos
+    * Acceso a arrays
+    * Operador ternario ?:
+    -->
+
+    <!-- android:text="@{usuario.nombre.toUpperCase()}" --><!-- android:visibility="@{usuario.apellido.length() > 5 ? View.GONE : View.VISIBLE}" -->
+
+    <!-- Elementos no permitidos dentro del data binding en las vistas
+    * this
+    * super
+    * new
+    * Invocación genérica explícita de métodos
+    -->
+
+    <!--
+    Operador nulo
+    android:text="@{usuario.apellido != null ? usuario.apellido : "Nos falta el apellido"}
+    android:text="@{usuario.apellido ?? "Nos falta el apellido"}
+    -->
+
+    <!-- Colecciones aceptadas
+        <import type="android.util.SparseArray"/>
+        <import type="java.util.Map"/>
+        <import type="java.util.List"/>
+        <variable name="list" type="List<String>"/>
+        <variable name="sparse" type="SparseArray<String>"/>
+        <variable name="map" type="Map<String, String>"/>
+        <variable name="index" type="int"/>
+        <variable name="key" type="String"/>
+    -->
+
+    <!--
+            Recursos a los que podemos acceder desde databinding
+
+            Type                Referencia Normal          Referencia en la expresión
+            String[]	        @array                     @stringArray
+            int[]	            @array	                   @intArray
+            TypedArray	        @array	                   @typedArray
+            Animator	        @animator	               @animator
+            StateListAnimator	@animator	               @stateListAnimator
+            color int	        @color	                   @color
+            ColorStateList	    @color	                   @colorStateList
+     -->
