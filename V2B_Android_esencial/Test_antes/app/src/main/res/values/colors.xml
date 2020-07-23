@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/primaryColor</color>
+    <color name="colorPrimaryDark">@color/primaryDarkColor</color>
+    <color name="colorAccent">@color/primaryLightColor</color>
+
+
+    <color name="primaryColor">#5e35b1</color>
+    <color name="primaryLightColor">#9162e4</color>
+    <color name="primaryDarkColor">#280680</color>
+    <color name="secondaryColor">#311b92</color>
+    <color name="secondaryLightColor">#6746c3</color>
+    <color name="secondaryDarkColor">#000063</color>
+    <color name="primaryTextColor">#000063</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+
+    <color name="primary_dark_material_light">@color/primaryColor</color>
+    <color name="accent_material_light">@color/primaryLightColor</color>
+    <color name="foreground_material_light">@color/secondaryLightColor</color>
+</resources>

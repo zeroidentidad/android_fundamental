@@ -1,0 +1,45 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.android_gradle_plugin = "3.1.2"
+versions.anko_version = "0.10.5"
+versions.espresso_core_test = "3.0.2"
+versions.junit_test = "4.12"
+versions.kotlin = "1.2.40"
+versions.pretty_logs = "2.2.0"
+versions.runner_test = "1.0.2"
+versions.support = "27.1.1"
+
+def deps = [:]
+
+def support = [:]
+support.appcompat = "com.android.support:appcompat-v7:$versions.support"
+support.design = "com.android.support:design:$versions.support"
+deps.support = support
+
+def build_versions = [:]
+build_versions.min_sdk = 16
+build_versions.target_sdk = 27
+ext.build_versions = build_versions
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+deps.kotlin = kotlin
+
+def test = [:]
+test.junit = "junit:junit:$versions.junit_test"
+test.runner = "com.android.support.test:runner:$versions.runner_test"
+test.espresso_core = "com.android.support.test.espresso:espresso-core:$versions.espresso_core_test"
+deps.test = test
+
+def anko = [:]
+anko.commons = "org.jetbrains.anko:anko-commons:$versions.anko_version"
+deps.anko = anko
+
+// Others
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.pretty_logs = "com.orhanobut:logger:$versions.pretty_logs"
+
+ext.deps = deps

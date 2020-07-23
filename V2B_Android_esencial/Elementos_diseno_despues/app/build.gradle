@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
+
+apply from: '../config/functions.gradle'
+
+android {
+    signingConfigs {
+        defaultKey
+    }
+    generateSignature()
+
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "com.linkedin.curso.android.mitiempo.mitiempo"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        applicationVariants.all {
+            variant ->
+                variant.buildConfigField STRING, WEATHER_API, getCustomProperty(WEATHER_API)
+                variant.buildConfigField STRING, OPEN_WEATHER_API_KEY, getAPIKey(OPEN_WEATHER_API_KEY)
+                variant.buildConfigField STRING, WEATHER_ICON_URL, getCustomProperty(WEATHER_ICON_URL)
+                variant.buildConfigField STRING, PROFILE_API, getCustomProperty(PROFILE_API)
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.defaultKey
+            buildConfigField BOOLEAN, DEBUG_MODE, TRUE
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.defaultKey
+            buildConfigField BOOLEAN, DEBUG_MODE, FALSE
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // Kotlin
+    implementation deps.kotlin.stdlib
+    // Librerías android
+    implementation deps.support.appcompat
+    implementation deps.support.design
+    implementation deps.support.palette
+    implementation deps.support.constraint
+    // Google Services
+    implementation deps.google_services.auth
+    implementation deps.google_services.location
+    // Anko
+    implementation deps.anko.commons
+    // Pretty-Logs
+    implementation deps.pretty_logs
+    // Firebase
+    implementation deps.firebase.core
+    implementation deps.firebase.auth
+    // Architecture components
+    implementation deps.architecture_components.lifecycle
+    implementation deps.architecture_components.lifecycle_reactive
+    annotationProcessor deps.architecture_components.lifecycle_compiler
+    kapt deps.architecture_components.room_compiler
+    implementation deps.architecture_components.room
+    implementation deps.architecture_components.work
+    implementation deps.architecture_components.nav_fragment
+    implementation deps.architecture_components.nav_ui
+
+    // Retrofit
+    implementation deps.retrofit.common
+    implementation deps.retrofit.adapter_rxjava
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.rxjava
+    implementation deps.retrofit.okhttp_logging
+    // Picasso
+    implementation deps.picasso
+    // CircleImageView
+    implementation deps.circle_iv
+    // Blur imagenes
+    implementation deps.blur
+    // Facilita tomar fotos
+    implementation deps.para_camera
+    // Graficos
+    implementation deps.graficos
+    // Animaciones
+    implementation deps.lottie
+
+    // Test
+    testImplementation deps.test.junit
+    testImplementation deps.architecture_components.lifecycle_testing
+    testImplementation deps.architecture_components.room_testing
+    testImplementation deps.architecture_components.work_testing
+    testImplementation deps.architecture_components.nav_testing
+    androidTestImplementation deps.test.runner
+    androidTestImplementation deps.test.espresso_core
+}
+apply plugin: 'com.google.gms.google-services'

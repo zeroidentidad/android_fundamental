@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_out">Cerrar Sesión</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="signed_out">Sesión cerrada</string>
+    <string name="desc_firebase_lockup">Firebase logo y nombre</string>
+    <string name="firebase_status_fmt">Firebase Usuario: %s</string>
+    <string name="google_status_fmt">Google Usuario: %s</string>
+    <string name="google_title_text">Iniciar con Google</string>
+    <string name="activity_profile_llamar_ic">Llamar</string>
+    <string name="activity_profile_email_ic">Email</string>
+    <string name="boton_aceptar">Aceptar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="boton_neutro">Later</string>
+    <string name="pression">Presión</string>
+    <string name="menu_more">Más</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_location">Localización</string>
+    <string name="menu_guardar">Guardar</string>
+    <string name="navigation_drawer_open">Abrir el menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar el menú de navegación</string>
+    <string name="nav_header_subtitle">Bienvenido a nuestra app</string>
+    <string name="prevision">Previsión</string>
+    <string name="compartir">Compartir</string>
+    <string name="comunicacion">Contar</string>
+    <string name="share_information_text">¡Hola! ¿Conoces la aplicación Mi Tiempo? Es impresionante</string>
+    <string name="sms_recibido">SMS recibido! -> </string>
+    <string name="notificaciones_titulo">Nuevas noticias</string>
+</resources>

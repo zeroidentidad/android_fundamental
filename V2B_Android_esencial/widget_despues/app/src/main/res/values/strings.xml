@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name" translatable="false">Mi Tiempo</string>
+    <string name="max_temp" translatable="false">Max:</string>
+    <string name="min_temp" translatable="false">Min:</string>
+    <string name="temperatura" translatable="false">%s ºC</string>
+    <string name="notif_channel_name" translatable="false">mitiemponotificationchannel</string>
+    <string name="notif_channel_desc" translatable="false">this is the notification channel for Mi Tiempo app</string>
+
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="google_title_text">Google Sign In</string>
+    <string name="activity_profile_llamar_ic">Call</string>
+    <string name="activity_profile_email_ic">Email</string>
+    <string name="boton_aceptar">Ok</string>
+    <string name="boton_cancelar">Cancel</string>
+    <string name="boton_neutro">Más tarde</string>
+    <string name="pression">Pression</string>
+    <string name="menu_more">More</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_location">Location</string>
+    <string name="menu_guardar">Save</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_subtitle">Wellcome to our app</string>
+    <string name="prevision">Forecast</string>
+    <string name="compartir">Share</string>
+    <string name="comunicacion">Communicate</string>
+    <string name="share_information_text">Hi! Do you know about Mi Tiempo app? It\'s awesome</string>
+    <string name="sms_recibido">SMS received! -> </string>
+    <string name="notificaciones_titulo">Good news everyone</string>
+    <string name="appwidget_text">Hi </string>
+    <string name="add_widget">Add widget</string>
+    <string name="short_label">Pofile</string>
+    <string name="long_label">Go to profile</string>
+    <string name="disabled_message">Shortcut disable</string>
+</resources>

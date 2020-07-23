@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/loginActivity">
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.linkedin.curso.android.mitiempo.mitiempo.vistas.login.LoginActivity"
+        android:label="LoginActivity">
+        <action
+            android:id="@+id/action_loginActivity_to_saludoActivity"
+            app:destination="@id/saludoActivity" />
+    </activity>
+    <activity
+        android:id="@+id/saludoActivity"
+        android:name="com.linkedin.curso.android.mitiempo.mitiempo.vistas.saludo.SaludoActivity"
+        android:label="SaludoActivity">
+        <action
+            android:id="@+id/action_saludoActivity_to_semanaActivity"
+            app:destination="@id/semanaActivity" />
+        <action
+            android:id="@+id/action_saludoActivity_to_previsionActivity"
+            app:destination="@id/previsionActivity" />
+    </activity>
+    <activity
+        android:id="@+id/semanaActivity"
+        android:name="com.linkedin.curso.android.mitiempo.mitiempo.vistas.profile.ProfileActivity"
+        android:label="activity_semana"
+        tools:layout="@layout/activity_profile" />
+
+    <activity
+        android:id="@+id/previsionActivity"
+        android:name="com.linkedin.curso.android.mitiempo.mitiempo.vistas.prevision.PrevisionActivity"
+        android:label="prevision_activity"
+        tools:layout="@layout/prevision_activity">
+        <action
+            android:id="@+id/action_saludoActivity_to_previsionLecturaFragment"
+            app:destination="@id/previsionLecturaFragment" />
+    </activity>
+    <fragment
+        android:id="@+id/previsionLecturaFragment"
+        android:name="com.linkedin.curso.android.mitiempo.mitiempo.vistas.prevision.ui.prevision.PrevisionLecturaFragment"
+        android:label="PrevisionLecturaFragment">
+        <action
+            android:id="@+id/action_previsionLecturaFragment_to_previsionGraficoFragment"
+            app:destination="@id/previsionGraficoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previsionGraficoFragment"
+        android:name="com.linkedin.curso.android.mitiempo.mitiempo.vistas.prevision.ui.prevision.PrevisionGraficoFragment"
+        android:label="PrevisionGraficoFragment" />
+
+</navigation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/img_tiempo"
+        android:shortcutDisabledMessage="@string/disabled_message"
+        android:shortcutId="show_profile_mi_tiempo"
+        android:shortcutLongLabel="@string/long_label"
+        android:shortcutShortLabel="@string/short_label">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.linkedin.curso.android.mitiempo.mitiempo.vistas.profile.ProfileActivity"
+            android:targetPackage="com.linkedin.curso.android.mitiempo.mitiempo" />
+    </shortcut>
+</shortcuts>

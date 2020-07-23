@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "234895504953",
+    "firebase_url": "https://mi-tiempo-99717.firebaseio.com",
+    "project_id": "mi-tiempo-99717",
+    "storage_bucket": "mi-tiempo-99717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234895504953:android:2aafbbb8328d115e",
+        "android_client_info": {
+          "package_name": "com.linkedin.curso.android.mitiempo.mitiempo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234895504953-a7ttip8b8kql719jaqg1ehpma1ftf181.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.linkedin.curso.android.mitiempo.mitiempo",
+            "certificate_hash": "e42877b68e737a75b5fbb5acf6c9de3c91274cbe"
+          }
+        },
+        {
+          "client_id": "234895504953-lo9r3jvea4m3ftovdoc48gpp8jatagom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzCAJi8NGuzu67z_TrSeyyXo2iP5b0AnY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234895504953-lo9r3jvea4m3ftovdoc48gpp8jatagom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_out">Cerrar Sesión</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="signed_out">Sesión cerrada</string>
+    <string name="desc_firebase_lockup">Firebase logo y nombre</string>
+    <string name="firebase_status_fmt">Firebase Usuario: %s</string>
+    <string name="google_status_fmt">Google Usuario: %s</string>
+    <string name="google_title_text">Iniciar con Google</string>
+    <string name="activity_profile_llamar_ic">Llamar</string>
+    <string name="activity_profile_email_ic">Email</string>
+    <string name="boton_aceptar">Aceptar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="boton_neutro">Later</string>
+</resources>

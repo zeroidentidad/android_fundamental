@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'config/versions.gradle'
+    apply from: 'config/functions.gradle'
+    addRepos(repositories)
+
+    dependencies {
+        classpath deps.android_gradle_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.google_services.gms
+        classpath deps.architecture_components.nav_safe
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
