@@ -14,12 +14,12 @@
         android:animateFirstView="true"
         android:inAnimation="@android:anim/fade_in"
         android:outAnimation="@android:anim/fade_out"
-        tools:ignore="MissingConstraints">
+        >
 
         <LinearLayout
             android:id="@+id/uno"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <EditText
@@ -43,8 +43,8 @@
 
         <LinearLayout
             android:id="@+id/dos"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -56,8 +56,8 @@
 
         <LinearLayout
             android:id="@+id/tres"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -77,15 +77,17 @@
     <Button
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Siguiente"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_weight="1"
+         />
 
     <Button
         android:id="@+id/btnPrevious"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Anterior"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="wrap_content"
+        android:text="Anterior"app:layout_constraintVertical_weight="1"
+
+         />
 
 </android.support.constraint.ConstraintLayout>
